@@ -1,52 +1,64 @@
 /*# sourceMappingURL=style.scss.map */
 /*# sourceMappingURL=style.scss.map */
+.navigation__link, .logo-path {
+  transition: all 0.3s ease-out;
+}
+
+.button, body {
+  font-family: "Open Sans", Verdana, sans-serif;
+}
+
+.promo__text, .link-button, h1 {
+  font-family: "Poppins", Verdana, sans-serif;
+}
+
 html {
   font-size: 10px;
 }
 
 body {
   font-size: 1.6rem;
-  font-family: "Open Sans", Verdana, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2.6rem;
 }
 
 h1 {
-  font-family: "Poppins", Verdana, sans-serif;
+  font-size: 4.4rem;
   font-style: normal;
-  font-weight: 700;
-  font-size: 44px;
-  line-height: 54px;
+  font-weight: bold;
+  line-height: 5.4rem;
 }
 
 h2 {
+  font-size: 3.4rem;
   font-style: normal;
-  font-weight: 700;
-  font-size: 34px;
-  line-height: 46px;
+  font-weight: bold;
+  line-height: 4.6rem;
 }
 
 h3 {
+  font-size: 2.4rem;
   font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 34px;
+  font-weight: bold;
+  line-height: 3.4rem;
 }
 
 h4 {
+  font-size: 2.2rem;
   font-style: normal;
   font-weight: 600;
-  font-size: 22px;
-  line-height: 30px;
+  line-height: 3rem;
 }
 
 h5 {
+  font-size: 1.6rem;
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 26px;
+  font-weight: bold;
+  line-height: 2.6rem;
 }
 
 .button {
-  font-family: "Open Sans", Verdana, sans-serif;
   padding: 11px 25px 13px;
   width: 174px;
   height: 53px;
@@ -57,27 +69,85 @@ h5 {
   cursor: pointer;
   transition: all 0.3s;
 }
-
 .button_bordered {
   background: #ffffff;
   border: 1px solid #d7d7d7;
   color: #544837;
 }
-
+.button_bordered:hover {
+  background: #bcd0e5;
+  border-color: #bcd0e5;
+}
 .button_colored {
   background: #ff9900;
   color: #ffffff;
   border: 1px solid #ff9900;
 }
-
 .button_colored:hover {
   background: #ff7549;
   border-color: #ff7549;
 }
 
-.button_bordered:hover {
-  background: #bcd0e5;
-  border-color: #bcd0e5;
+.link-button {
+  color: #ff9900;
+  display: inline-flex;
+  align-items: center;
+}
+
+.link-button__text {
+  margin-left: 9px;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo-object {
+  width: 160px;
+  height: 30px;
+}
+
+.logo-svg {
+  cursor: pointer;
+}
+.logo-svg:hover .logo-path {
+  fill: #ff9900;
+}
+
+.ico {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.ico-square {
+  width: 50px;
+  height: 50px;
+  border-radius: 19px;
+  display: inline-block;
+}
+.ico-square_yellow {
+  background-color: #fab005;
+}
+.ico-square_red {
+  background-color: #f03e3d;
+}
+.ico-square_blue {
+  background-color: #4dadf7;
+}
+.ico-square_violet {
+  background-color: #7752be;
+}
+
+.ico_play {
+  background-image: url("../../img/icons/play.svg");
+  width: 18px;
+  height: 19px;
+}
+
+.ico_arrow {
+  background-image: url("../../img/icons/arrow.svg");
+  width: 18px;
+  height: 19px;
 }
 
 .wrapper {
@@ -97,24 +167,39 @@ h5 {
   justify-content: space-between;
 }
 
-.navigation {
-  display: flex;
-  font-size: 1.5rem;
-  line-height: 2.8rem;
-}
-
-.navigation__link {
-  list-style: none;
-  padding: 0 10px;
-  cursor: pointer;
-}
-
 .header_buttons > .button {
   margin-left: 14px;
 }
 
 .header_buttons > .button:first-child {
   margin-left: 0;
+}
+
+.layout-4-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.layout-4-column > * {
+  flex-basis: 21%;
+}
+
+.layout-3-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.layout-3-column > * {
+  flex-basis: 30%;
+}
+
+.layout-2-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.layout-2-column > * {
+  flex-basis: 45%;
 }
 
 .contact-us {
@@ -135,8 +220,43 @@ h5 {
   padding-right: 65px;
 }
 
+.promo__title {
+  margin: 0 0 30px;
+}
+
+.promo__text {
+  max-width: 487px;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2.8rem;
+  margin: 0 0 45px;
+}
+
 .promo__buttons > * {
   margin-right: 44px;
+}
+
+.navigation {
+  display: flex;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+}
+
+.navigation__link {
+  list-style: none;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.navigation__link:hover {
+  color: #ff9900;
+}
+
+.tools__title {
+  max-width: 462px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 70px;
 }
 
 /*# sourceMappingURL=style.css.map */

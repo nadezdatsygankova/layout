@@ -11,6 +11,17 @@
 .promo__content {
   padding-right: 65px;
 }
+
+.promo__title {
+  margin: 0 0 30px;
+}
+.promo__text {
+  max-width: 487px;
+  @extend %font-add;
+  @include font($size: 1.8rem, $line-height: 2.8rem, $weight: normal);
+  margin: 0 0 45px;
+}
+
 .promo__buttons > * {
   margin-right: 44px;
 }
