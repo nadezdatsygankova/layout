@@ -2,11 +2,13 @@
   cursor: pointer;
   display: inline-block;
 }
-.ico-square {
+.icon-square {
   width: 50px;
   height: 50px;
   border-radius: 19px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   &_yellow {
     background-color: $color-yellow;
   }
@@ -29,6 +31,24 @@
 
 .ico_arrow {
   background-image: url('../../img/icons/arrow.svg');
+  width: 12px;
+  height: 17px;
+}
+
+.ico_snake {
+  background-image: url('../../img/icons/snake.svg');
   width: 18px;
-  height: 19px;
+  height: 14px;
+}
+
+.ico_heart {
+  background-image: url('../../img/icons/heart.svg');
+  width: 17px;
+  height: 15px;
+}
+
+.ico_clock {
+  background-image: url('../../img/icons/time.svg');
+  width: 15px;
+  height: 17px;
 }
